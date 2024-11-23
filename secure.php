@@ -5,11 +5,6 @@ require_once 'vendor/autoload.php';  // Make sure you have phpdotenv installed
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-// Database connection using environment variables
-$servername = $_ENV['DB_SERVER'];
-$username = $_ENV['DB_USER'];
-$password = $_ENV['DB_PASSWORD'];
-$dbname = $_ENV['DB_NAME'];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
